@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Img Change</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .imgs {
+            margin: auto;
+            height: 50vh;
+            width: 38%;
+            border: 2px solid rgb(210, 198, 198);
+            border-radius: 10px;
+            background-image: url("Jujutsu_Kaisen.png");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        button {
+            margin-top:20px;
+            height: 7vh;
+            width:10%;
+            border-radius: 10px;
+            border: none;
+            background-color: rgb(103, 39, 164);
+            color: white;
+            font-size: 15px;
+            font-weight: bolder;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Jujutsu Kaisen</h1>
+    <div class="imgs"></div>
+    <button>Change Image</button>
+
+    <script>
+        let imgs = document.querySelector(".imgs");
+        let btn = document.querySelector("button");
+
+        let flag = 0;
+
+        btn.addEventListener("click", () => {
+            if (flag == 1) {
+                imgs.style.backgroundImage = "url('img3.png')";
+
+                flag = 0 
+            }else {
+                imgs.style.backgroundImage = "url('img2.png')";
+                flag = 1 
+            }
+        })
+    </script>
+</body>
+
+</html>
